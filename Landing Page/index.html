@@ -14,24 +14,24 @@
 <body>
     <div id="nav">
         <div id="nav-left">
-            <img class="logo" src="images/nike-logo-0.png">
+            <img class="logo" width="50px" src="images/nike-logo-0.png">
             <ul>
                 <li><a href="#home">HOME</a></li>
                 <li><a href="#about">ABOUT US</a></li>
                 <li><a href="#collection">COLLECTION</a></li>
-                <li><a href="#contact">CONTACT US</a></li>
+                <li><a href="#contact-us">CONTACT US</a></li>
             </ul>
         </div>
         <div id="nav-right">
-            <i class="fa-solid fa-magnifying-glass logo"></i>
-            <i class="fa-solid fa-cart-shopping logo"></i>
+            <i class="fa-solid fa-magnifying-glass logo" title="Search"></i>
+            <i class="fa-solid fa-cart-shopping logo" title="Your Cart"></i>
             <div id="drawerContainer">
-                <i id="hamburger" class="fa-solid fa-bars logo"></i>
+                <i id="hamburger" class="fa-solid fa-bars logo" title="Navigation"></i>
                 <ul id="dropdownContent">
                     <li><a href="#home">HOME</a></li>
                     <li><a href="#about">ABOUT US</a></li>
                     <li><a href="#collection">COLLECTION</a></li>
-                    <li><a href="#contact">CONTACT US</a></li>
+                    <li><a href="#contact-us">CONTACT US</a></li>
                 </ul>
             </div>
         </div>
@@ -100,6 +100,18 @@
                 <p class="price">₹ 15,995</p>
             </div>
         </div>
+    </div>
+    <div id="contact-us">
+        <h2>Contact Us</h2>
+        <form>
+            <label for="inputName">Name</label>
+            <input type="text" name="" id="inputName">
+            <label for="inputEmail">Email</label>
+            <input type="email" name="" id="inputEmail">
+            <label for="inputMessage">Message</label>
+            <textarea name="" rows="3" id="inputMessage"></textarea>
+            <button class="btn">Submit</button>
+        </form>
     </div>
     <script src="script.js"></script>
 </body>
