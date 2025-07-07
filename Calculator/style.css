@@ -1,0 +1,220 @@
+/* style.css */
+
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700&display=swap');
+
+/* Basic Reset and Full Viewport Setup */
+html, body {
+    margin: 0;
+    padding: 0;
+    height: 100%; /* Make html and body take full viewport height */
+    width: 100%; /* Make html and body take full viewport width */
+    overflow: hidden; /* Prevent scrolling on mobile */
+}
+
+body {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: #f5f7fa; /* Light background */
+    font-family: 'Roboto', sans-serif;
+    color: #333;
+    box-sizing: border-box; /* Include padding and border in the element's total width and height */
+}
+
+#container {
+    background-color: #ffffff; /* White background for the calculator */
+    border-radius: 12px;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1); /* Subtle, single shadow */
+    padding: 25px;
+    width: 90vw; /* Take 90% of viewport width on smaller screens */
+    max-width: 380px; /* Max width for desktop to prevent it from getting too wide */
+    height: 90vh; /* Take 90% of viewport height on smaller screens */
+    max-height: 600px; /* Max height for desktop */
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    border: 1px solid #e0e0e0; /* Light border for definition */
+    box-sizing: border-box; /* Crucial for responsive padding */
+}
+
+/* Input Display Styling */
+#inputContainer {
+    background-color: #eef2f6; /* Light gray for input background */
+    border-radius: 8px;
+    padding: 15px;
+    border: 1px solid #dcdfe4;
+    flex-grow: 1; /* Allows input container to take available space */
+    display: flex; /* Use flexbox to vertically center text if needed */
+    align-items: flex-end; /* Align text to the bottom of the input field */
+    min-height: 80px; /* Minimum height for the input display */
+    box-sizing: border-box;
+}
+
+#input {
+    width: 100%;
+    border: none;
+    background: transparent;
+    font-size: 2.2em; /* Base font size for input */
+    text-align: right;
+    color: #333;
+    outline: none;
+    padding: 0;
+    height: auto; /* Allow height to adjust based on content if needed */
+    overflow-x: auto; /* Enable horizontal scrolling if text overflows */
+    white-space: nowrap; /* Prevent text from wrapping */
+    min-height: 1.2em; /* Ensure minimum height for text */
+}
+
+/* Button Grid Styling */
+#btnContainer {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 12px; /* Spacing between buttons */
+    flex-grow: 3; /* Allows button container to take more available space */
+}
+
+.btn {
+    background-color: #f0f3f6; /* Light gray for regular buttons */
+    border: none;
+    border-radius: 8px; /* Less rounded corners */
+    font-size: 1.3em; /* Base font size for buttons */
+    padding: 18px 0; /* Vertical padding */
+    cursor: pointer;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.08); /* Flat, subtle shadow */
+    transition: background-color 0.2s ease, box-shadow 0.2s ease;
+    color: #555;
+    font-weight: 500;
+    user-select: none;
+    display: flex; /* Use flexbox to center text horizontally and vertically */
+    justify-content: center;
+    align-items: center;
+    min-height: 50px; /* Minimum height for buttons to ensure tap target size */
+}
+
+.btn:hover {
+    background-color: #e5e9ed; /* Slightly darker on hover */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.12); /* Slightly more prominent shadow on hover */
+}
+
+.btn:active {
+    background-color: #dbe0e5; /* Even darker when pressed */
+    box-shadow: 0 1px 3px rgba(0, 0, 0, 0.15) inset; /* Inner shadow for pressed effect */
+}
+
+/* Specific styling for operator buttons */
+.btn:nth-child(4n), /* Every 4th button (/, *, -, +) */
+.btn:nth-child(3) { /* The '%' button */
+    background-color: #5cb85c; /* Green for operators */
+    color: white;
+    font-weight: 600;
+}
+
+.btn:nth-child(4n):hover,
+.btn:nth-child(3):hover {
+    background-color: #4cae4c;
+}
+
+.btn:nth-child(4n):active,
+.btn:nth-child(3):active {
+    background-color: #449d44;
+}
+
+/* Specific styling for AC, DEL, and = buttons */
+.btn:nth-child(1) { /* AC button */
+    background-color: #d9534f; /* Red for clear */
+    color: white;
+    font-weight: 600;
+}
+
+.btn:nth-child(1):hover {
+    background-color: #c9302c;
+}
+
+.btn:nth-child(1):active {
+    background-color: #ac2925;
+}
+
+.btn:nth-child(19) { /* DEL button */
+    background-color: #f0ad4e; /* Orange for delete */
+    color: white;
+    font-weight: 600;
+}
+
+.btn:nth-child(19):hover {
+    background-color: #ec971f;
+}
+
+.btn:nth-child(19):active {
+    background-color: #d58512;
+}
+
+.btn:last-child { /* The '=' button */
+    background-color: #0275d8; /* Blue for equals */
+    color: white;
+    grid-column: span 1; /* Make the equals button span two columns */
+    font-size: 1.6em; /* Slightly smaller for simplicity */
+}
+
+.btn:last-child:hover {
+    background-color: #025aa5;
+}
+
+.btn:last-child:active {
+    background-color: #014c8c;
+}
+
+/* Adjustments for parenthesis button to align with numbers */
+.btn:nth-child(2) {
+    grid-column: span 1;
+}
+
+/* Media Queries for fine-tuning on smaller screens (optional, but good practice) */
+@media (max-width: 600px) {
+    #container {
+        padding: 15px; /* Reduce padding on smaller screens */
+        gap: 15px; /* Reduce gap */
+        border-radius: 0; /* Make it full width and height without rounded corners */
+        width: 100vw; /* Take full viewport width */
+        height: 100vh; /* Take full viewport height */
+        max-width: none; /* Remove max-width constraint */
+        max-height: none; /* Remove max-height constraint */
+        box-shadow: none; /* Remove shadow for a truly "app-like" feel */
+        border: none; /* Remove border */
+    }
+
+    #inputContainer {
+        padding: 10px;
+    }
+
+    #input {
+        font-size: 2.5em; /* Slightly larger font on mobile for readability */
+        min-height: 1.5em;
+    }
+
+    #btnContainer {
+        gap: 8px; /* Even smaller gap between buttons on very small screens */
+    }
+
+    .btn {
+        font-size: 1.4em; /* Slightly larger button text on mobile */
+        padding: 15px 0; /* Adjust button padding */
+        min-height: 60px; /* Ensure good tap target size */
+    }
+
+    .btn:last-child {
+        font-size: 1.8em; /* Larger equals button text on mobile */
+    }
+}
+
+/* Further adjustments for very small mobile screens (e.g., iPhone SE) */
+@media (max-width: 380px) {
+    #input {
+        font-size: 2.2em; /* Adjust font size for very narrow screens */
+    }
+    .btn {
+        font-size: 1.2em;
+    }
+    .btn:last-child {
+        font-size: 1.5em;
+    }
+}
