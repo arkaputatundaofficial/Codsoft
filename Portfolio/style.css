@@ -143,7 +143,7 @@ body {
 }
 
 .top-bar {
-    padding: 15px 20px;
+    padding: 20px;
     display: flex;
     align-items: center;
     background-color: var(--sidebar-bg);
@@ -316,6 +316,9 @@ body {
     justify-content: center;
     color: white;
     font-size: 2rem;
+}
+.project-image img{
+    height: 100%;
 }
 
 .project-info {
