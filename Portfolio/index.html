@@ -1,581 +1,291 @@
 <!DOCTYPE html>
-
 <html lang="en">
 
-
-
 <head>
-
     <meta charset="UTF-8">
-
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-
     <title>My Portfolio | ChatGPT Style</title>
-
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
-
     <link rel="stylesheet" href="style.css">
-
 </head>
 
-
-
 <body>
-
     <!-- Overlay for mobile sidebar -->
-
     <div class="overlay" id="overlay"></div>
 
-
-
     <!-- Sidebar Navigation -->
-
     <div class="sidebar" id="sidebar">
-
         <div class="sidebar-header">
-
             <h1><i class="fas fa-code"></i> Portfolio</h1>
-
         </div>
-
         <ul class="nav-links">
-
             <li><a href="#" class="active" data-section="hero"><i class="fas fa-home"></i> Introduction</a></li>
-
             <li><a href="#" data-section="education"><i class="fas fa-graduation-cap"></i> Education</a></li>
-
             <li><a href="#" data-section="services"><i class="fas fa-cogs"></i> Services</a></li>
-
             <li><a href="#" data-section="projects"><i class="fas fa-project-diagram"></i> Projects</a></li>
-
             <li><a href="#" data-section="why"><i class="fas fa-star"></i> Why Choose Me</a></li>
-
             <li><a href="#" data-section="contact"><i class="fas fa-envelope"></i> Contact</a></li>
-
         </ul>
 
-
-
         <!-- Hire Me Button -->
-
         <a href="#" class="hire-me-btn" id="hireMeBtn">
-
             <i class="fas fa-briefcase"></i> Hire Me
-
         </a>
 
-
-
         <div class="sidebar-footer">
-
             <div class="user-profile">
-
                 <div class="avatar">AP</div>
-
                 <div class="user-info">
-
                     <div class="username">Arka Putatunda</div>
-
                     <div class="user-title">Web Developer</div>
-
                 </div>
-
             </div>
-
         </div>
-
     </div>
-
-
 
     <!-- Main Content Area -->
-
     <div class="main-content">
-
         <div class="top-bar">
-
             <button class="menu-toggle" id="menuToggle">
-
                 <i class="fas fa-bars"></i>
-
             </button>
-
             <h2 class="section-title" id="sectionTitle">Introduction</h2>
-
         </div>
-
-
 
         <div class="content-container">
-
             <!-- Hero Section -->
-
             <div class="section-content" id="hero">
-
                 <div class="hero-content">
-
                     <div class="hero-text">
-
                         <h1>Arka Putatunda</h1>
-
                         <p class="tagline">I'm a passionate Computer Science student specializing in web and app
-
                             development, with hands-on experience in React, Java, and Android. I love building
-
                             intuitive, efficient solutions and continuously learning new technologies.</p>
-
                         <div class="btn-container">
-
                             <a href="#" class="btn" id="downloadCvHero">Download CV</a>
-
                             <a href="#" class="btn btn-outline" id="learnMoreBtn">Learn More</a>
-
                         </div>
-
                     </div>
-
                     <div class="profile-pic">
-
                         <img src="assets/myself.jpeg" alt="Profile Picture">
-
                     </div>
-
                 </div>
-
             </div>
-
-
 
             <!-- Education Section -->
-
             <div class="section-content" id="education" style="display: none;">
-
                 <h2>Education</h2>
-
                 <p>My educational background and certifications:</p>
 
-
-
                 <div class="timeline">
-
                     <div class="timeline-item left">
-
                         <div class="timeline-content">
-
                             <div class="edu-logo">
-
                                 <i class="fas fa-university"></i>
-
                             </div>
-
                             <div class="edu-details">
-
                                 <h3>Diploma in Computer Science and Technology</h3>
-
                                 <p>Technique Polytechnic Institute</p>
-
                                 <p class="edu-duration">2023 - Present</p>
-
                             </div>
-
                         </div>
-
                     </div>
-
                     <div class="timeline-item right">
-
                         <div class="timeline-content">
-
                             <div class="edu-logo">
-
                                 <i class="fas fa-graduation-cap"></i>
-
                             </div>
-
                             <div class="edu-details">
-
                                 <h3>Secondary Education</h3>
-
                                 <p>Don Bosco School Bandel</p>
-
                                 <p class="edu-duration">2013 - 2023</p>
-
                             </div>
-
                         </div>
-
                     </div>
-
                 </div>
-
             </div>
-
-
 
             <!-- Services Section -->
-
             <div class="section-content" id="services" style="display: none;">
-
                 <h2>My Services</h2>
-
                 <p>I provide comprehensive web development solutions tailored to your business needs. Here's what I
-
                     offer:</p>
 
-
-
                 <div class="services-grid">
-
                     <div class="service-card">
-
                         <i class="fas fa-code"></i>
-
                         <h3>Custom Websites</h3>
-
                         <p>Responsive and functional websites built with clean, modern code.</p>
-
                     </div>
 
-
-
                     <div class="service-card">
-
                         <i class="fas fa-paint-brush"></i>
-
                         <h3>UI/UX Design</h3>
-
                         <p>Pixel-perfect designs transformed into intuitive user interfaces.</p>
-
                     </div>
 
-
-
                     <div class="service-card">
-
                         <i class="fas fa-bullseye"></i>
-
                         <h3>Landing Pages</h3>
-
                         <p>High-converting landing pages tailored for businesses and campaigns.</p>
-
                     </div>
 
-
-
                     <div class="service-card">
-
                         <i class="fas fa-tools"></i>
-
                         <h3>Website Maintenance</h3>
-
                         <p>Regular updates, bug fixes, and performance optimizations for your site.</p>
-
                     </div>
 
-
-
                     <div class="service-card">
-
                         <i class="fas fa-cloud-upload-alt"></i>
-
                         <h3>Hosting & Deployment</h3>
-
                         <p>Seamless deployment and hosting setup for your web projects.</p>
-
                     </div>
-
-
 
                     <div class="service-card">
-
                         <i class="fas fa-cogs"></i>
-
                         <h3>Custom Components</h3>
-
                         <p>Interactive tools and components built for your specific needs.</p>
-
                     </div>
-
                 </div>
-
             </div>
-
-
 
             <!-- Projects Section -->
-
             <div class="section-content" id="projects" style="display: none;">
-
                 <h2>Recent Projects</h2>
-
                 <p>Here are some of my recent projects that showcase my skills and expertise:</p>
 
-
-
                 <div class="projects-grid">
-
                     <div class="project-card">
-
                         <div class="project-image">
-
                             <img src="assets/project1.jpg" alt="Quiz App preview" />
-
                         </div>
-
                         <div class="project-info">
-
                             <h3>Quiz App</h3>
-
                             <p>A JSON powered local quiz system.</p>
-
                         </div>
-
                     </div>
 
-
-
                     <div class="project-card">
-
                         <div class="project-image">
-
                             <img src="assets/project2.jpg" alt="What's on My Watchlist preview" />
-
                         </div>
-
                         <div class="project-info">
-
                             <h3>What's on My Watchlist</h3>
-
                             <p>An offline movie watchlist database management system for Android.</p>
-
                         </div>
-
                     </div>
-
-
 
                     <div class="project-card">
-
                         <div class="project-image">
-
                             <img src="assets/project3.jpg" alt="Wallpaper Library preview" />
-
                         </div>
-
                         <div class="project-info">
-
                             <h3>Wallpaper Library</h3>
-
                             <p>A Simple Online Photo Library powered by Unsplash.</p>
-
                         </div>
-
                     </div>
-
                 </div>
-
             </div>
-
-
 
             <!-- Why Choose Me Section -->
-
             <div class="section-content" id="why" style="display: none;">
-
                 <h2>Why Choose Me</h2>
-
                 <p>As a dedicated developer with a passion for creating exceptional digital experiences, here's what
-
                     sets me apart:</p>
 
-
-
                 <div class="why-grid" style="margin-top: 30px;">
-
                     <!-- Problem Solving -->
-
                     <div class="why-card">
-
                         <i class="fas fa-bolt"></i>
-
                         <h3>Technical Problem Solver</h3>
-
                         <p>Proven ability to diagnose and resolve complex technical issues with efficient solutions.</p>
-
                     </div>
-
-
 
                     <!-- Tech Adaptability -->
-
                     <div class="why-card">
-
                         <i class="fas fa-rocket"></i>
-
                         <h3>Tech Adaptability</h3>
-
                         <p>Quick mastery of emerging technologies to build future-proof, scalable solutions.</p>
-
                     </div>
-
-
 
                     <!-- Collaboration -->
-
                     <div class="why-card">
-
                         <i class="fas fa-users"></i>
-
                         <h3>Cross-Functional Collaborator</h3>
-
                         <p>Effective communicator bridging technical and business teams for aligned outcomes.</p>
-
                     </div>
-
-
 
                     <!-- Ownership -->
-
                     <div class="why-card">
-
                         <i class="fas fa-flag-checkered"></i>
-
                         <h3>Proactive Ownership</h3>
-
                         <p>Self-driven initiative to identify opportunities and lead improvements end-to-end.</p>
-
                     </div>
-
-
 
                     <!-- Client Focus -->
-
                     <div class="why-card">
-
                         <i class="fas fa-handshake"></i>
-
                         <h3>User-Centric Mindset</h3>
-
                         <p>Solutions engineered to address real user needs and drive business value.</p>
-
                     </div>
-
-
 
                     <!-- Quality -->
-
                     <div class="why-card">
-
                         <i class="fas fa-code"></i>
-
                         <h3>Quality Commitment</h3>
-
                         <p>Robust, maintainable code with rigorous testing and DevOps best practices.</p>
-
                     </div>
-
                 </div>
-
-
 
                 <div class="cv-download">
-
                     <a href="#" class="btn" id="downloadCvWhy">
-
                         <i class="fas fa-download"></i> Download CV
-
                     </a>
-
                 </div>
-
             </div>
-
-
 
             <!-- Contact Section -->
-
             <div class="section-content" id="contact" style="display: none;">
-
                 <h2>Get In Touch</h2>
-
                 <p>Have a project in mind or want to discuss potential opportunities? Feel free to reach out!</p>
 
-
-
                 <div class="alert alert-success" id="successAlert">
-
                     <i class="fas fa-check-circle"></i> Your message has been sent successfully!
-
                 </div>
 
-
-
                 <form class="contact-form" id="contactForm">
-
                     <div class="form-group">
-
                         <label for="name">Name *</label>
-
                         <input type="text" id="name" placeholder="Your name" required>
-
                         <div class="error-message">Name is required</div>
-
                     </div>
 
-
-
                     <div class="form-group">
-
                         <label for="email">Email *</label>
-
                         <input type="email" id="email" placeholder="Your email" required>
-
                         <div class="error-message">Valid email is required</div>
-
                     </div>
 
-
-
                     <div class="form-group">
-
                         <label for="subject">Subject *</label>
-
                         <input type="text" id="subject" placeholder="Subject" required>
-
                         <div class="error-message">Subject is required</div>
-
                     </div>
-
-
 
                     <div class="form-group">
-
                         <label for="message">Message *</label>
-
                         <textarea id="message" placeholder="Your message" required></textarea>
-
                         <div class="error-message">Message is required</div>
-
                     </div>
-
-
 
                     <button type="submit" class="btn">Send Message</button>
-
                 </form>
-
             </div>
-
         </div>
-
     </div>
 
-
-
     <script src="script.js"></script>
-
 </body>
-
-
 
 </html>
